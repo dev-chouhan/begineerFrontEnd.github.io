@@ -1,0 +1,303 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#frontPage{
+    width: 100vw;
+    height: 100vh;
+    /* border: 2px solid black; */
+}
+
+#header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 15%;
+    /* /* border: 2px solid black; */
+    background-color: transparent;
+    text-align: center;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    transition: 0.3s;
+    font-size: 1.8rem;
+    font-weight: 700;
+    z-index: 999;
+}
+
+header .logoArea{
+    /* border: 2px solid red; */
+    height: 100%;
+    width: 20%;
+    overflow: hidden;
+}
+
+header .logoArea #logo{
+    background-image: url(./logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 2% auto;
+    height: 85%;
+    width: 30%;
+    pointer-events: all;
+}
+
+#logo:hover #logoText:after {
+    content: "Hello!";
+    color: white;
+}
+
+header .logoArea #logo:hover{
+    filter: invert(1);
+    transition: all 0.5s;
+}
+
+header .indicatorArea{
+    height: 100%;
+    width: 80%;
+}
+
+header .indicatorArea #indicators{
+    /* border: 2px solid violet; */
+    height: 100%;
+    width: 100%;
+}
+
+header .indicatorArea #indicators ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 50%;
+    margin-left: 40%;
+    /* border: 2px solid green; */
+}
+
+header .indicatorArea #indicators ul li{
+    /* border: 2px solid black; */
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+header .indicatorArea #indicators ul li:hover{
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-shadow: 0px 0px 3px #fff;
+    transition: all 0.2s;
+}
+/* Header Ended */
+
+/* Front Area started */
+#frontArea{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#frontArea img{
+    position: absolute;
+    height: 90%;
+    width: 26%;
+    /* border: 2px solid black; */
+    z-index: 9;
+    top: 10%;
+    left: 55%;
+}
+
+#leftBlock{
+    background-color: #fff;
+    height: 100%;
+    width: 50%;
+}
+
+#leftBlock .textHere{
+    position: absolute;
+    top: 25%;
+    font-size: 3.5rem;
+    font-weight: 600;
+    left: 8%;
+    z-index: 1;
+    line-height: 1.3;
+}
+
+#rightBlock{
+    background-color: #FF8200;
+    height: 120%;
+    width: 200%;
+    transform: rotate(-70deg) translateY(150px) translateX(100px);
+}
+
+/* Random shit */
+.usual{
+    padding: 2rem 4rem;
+    margin: 1rem 3rem;
+}
+
+.usual > h1{
+    margin: 5% 27%;
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+/* Footer */
+
+#footerSection{
+    width: 100%;
+    height: 125vh;
+    color: #fff;
+}
+
+#footerSection footer{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#footerSection footer #footerImg{
+    /* border: 2px solid black; */
+    width: 60%;
+    height: 60%;
+    position: relative;
+    left: 40%;
+    top: 0;
+    background-image: url(./footerImage01.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#footerSection footer #footerText{
+    background-color: black;
+    width: 90%;
+    height: 70%;
+    position: relative;
+    top: -30%;
+    overflow: hidden;
+}
+
+#ToTop{
+    position: absolute;
+    width: 3%;
+    height: 40%;
+    top: 30%;
+    left: 0.2%;
+    /* border: 2px solid darkgoldenrod; */
+    writing-mode: vertical-lr;
+    cursor: pointer;
+}
+
+#ToTop > .ToTopText{
+    position: relative;
+    top: 20%;
+    height: 35%;
+    width: 100%;
+    /* border: 2px solid wheat; */
+    padding: 0.5em 0.4em;
+    transform: rotate(180deg);
+}
+
+#ToTop > .ToTopIcon{
+    position: relative;
+    font-size: 2.5em;
+    top: 55%;
+    left: -90%;
+    height: 20%;
+    width: 100%;
+    /* border: 2px solid crimson; */
+}
+
+#ToTop:hover :nth-child(1){
+    transform: translateY(50%) rotate(180deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+#ToTop:hover :nth-child(2){
+    transform: translateY(-180%);
+    transition: transform 0.8s ease-in-out;
+}
+
+.FooterLeftTop{
+    position: absolute;
+    top: 4%;
+    left: 3.5%;
+    height: 55%;
+    width: 37%;
+    /* border: 2px solid red; */
+    display: grid;
+    grid: auto auto / auto auto;
+    line-height: 1.5em;
+}
+
+.FooterLeftTop > span{
+    text-decoration:line-through;
+    color: #fff;
+    
+}
+
+.FooterLeftTop > .FooterCombination{
+    display: flex;
+    /* border: 2px solid green; */
+    flex-direction: column;
+    text-align: left;
+    /* align-items: center; */
+    padding-left: 25%;
+    justify-content: center;
+}
+
+.FooterLeftTop > .Light{
+    color: rgb(128, 128, 128) !important;
+}
+
+.FooterLeftBottom{
+    position: relative;
+    top: 80%;
+    left: 10em;
+    height: 18%;
+    width: 30%;
+    /* border: 2px solid blue; */
+}
+
+.FooterRightTop {
+    /* border: 2px solid pink; */
+    height: 75%;
+    width: 46%;
+    position: absolute;
+    right: 2%;
+    top: 8%;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0em 5em;
+}
+
+.FooterRightTop .FooterText{
+    border: 2px solid black;
+}
+
+.FooterRightBottom{
+    /* border: 2px solid slateblue; */
+    height: 18%;
+    width: 30%;
+    position: absolute;
+    bottom: -5%;
+    right: 10em;
+}
+
+.FooterLeftBottom, #FooterMain > .FooterRightBottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
